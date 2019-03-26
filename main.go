@@ -22,6 +22,8 @@ func main() {
 	
 	qr, err := db.Query(`INSERT INTO public."Name"(nombres) VALUES ('Jean');`)
 	
+	fmt.Printf("Query Result: %v\n", qr)
+	
 	port := os.Getenv("PORT")
 
 	if port == "" {
