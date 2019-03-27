@@ -21,7 +21,7 @@ func main() {
 	
 	defer db.Close()
 
-	qr, err := db.Query(`INSERT INTO Public."Name"('qwerty');`)
+	qr, err := db.Query(`INSERT INTO Public."Name"(nombres) VALUES ('equisdededededeputa');`)
 	
 	fmt.Printf("Query Result: %v\n", qr)
 	
