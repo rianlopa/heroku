@@ -20,8 +20,6 @@ func main() {
 	}
 	
 	defer db.Close()
-	
-	var name = "Jean Wong"
 
 	qr, err := db.Query(`INSERT INTO Public."Name"('qwerty');`)
 	
