@@ -14,7 +14,7 @@ import (
 
 func main() {
 	
-	db, err := sql.Open("postgres", os.Getenv("postgres://intvoldyplkcsz:3ceecdb0d7313dc8a2649b0ad2bc9f4cea69987b0f6a90cd81f902999723e217@ec2-107-20-177-161.compute-1.amazonaws.com:5432/d3ff2t14i54049"))
+	db, err := sql.Open("postgres", os.Getenv("DATABASE_URL"))
   		if err != nil {
     		log.Fatal(err)
 	}
@@ -23,8 +23,7 @@ func main() {
 	
 	var name = "Jean Wong"
 
-	qr, err := db.Query(`INSERT INTO Public."Name"(nombres)
-		VALUES ($1);`, name)
+	qr, err := db.Query(`INSERT INTO Public."Name"('qwerty');`)
 	
 	fmt.Printf("Query Result: %v\n", qr)
 	
