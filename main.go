@@ -14,7 +14,8 @@ import (
 
 func main() {
 	
-	db, err := sql.Open("postgres", os.Getenv("postgresql-infinite-10767"))
+	connStr := "user=ricardoloor dbname=postgres password=pioneer DATABASE_URL=radiant-retreat-37003 sslmode=enable"
+	db, err := sql.Open("postgres", connStr)
   		if err != nil {
     		log.Fatal(err)
 	}
