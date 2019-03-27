@@ -14,8 +14,7 @@ import (
 
 func main() {
 	
-	connStr := "user=ricardoloor dbname=postgres password=pioneer DATABASE_URL=radiant-retreat-37003 sslmode=enable"
-	db, err := sql.Open("postgres", connStr)
+	db, err := sql.Open("postgres", os.Getenv("postgres://intvoldyplkcsz:3ceecdb0d7313dc8a2649b0ad2bc9f4cea69987b0f6a90cd81f902999723e217@ec2-107-20-177-161.compute-1.amazonaws.com:5432/d3ff2t14i54049"))
   		if err != nil {
     		log.Fatal(err)
 	}
